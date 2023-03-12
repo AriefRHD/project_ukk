@@ -31,7 +31,7 @@ class AuthController extends Controller
             if ($user->level == 'admin') {
                 return redirect()->intended('/admin')->with('login', 'Login Success !!');
             } elseif ($user->level == 'petugas') {
-                return redirect()->intended('/admin')->with('login', 'Login Success !!');
+                return redirect()->intended('/akses-petugas')->with('login', 'Login Success !!');
             }
         }
         return back()->with('loginError', 'Login Failed!!');
@@ -47,8 +47,5 @@ class AuthController extends Controller
         return redirect('/login/admin')->with('logout', 'Logout Success !!');
     }
 
-    public function admin()
-    {
-        return view('admin');
-    }
+
 }

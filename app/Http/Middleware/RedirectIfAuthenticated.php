@@ -27,9 +27,15 @@ class RedirectIfAuthenticated
             } 
  
             if (Auth::guard($guard)->check()) { 
-                return redirect(RouteServiceProvider::HOME); 
+                if(Auth::guard($guard)->user()->level == 'admin'){
+                    return redirect(RouteServiceProvider::HOME); 
+                }else{
+                    return redirect('akses-petugas');  
+                }
+                // dd(Auth::guard($guard)->user()->level == 'admin');
+                // die;
             } 
-        } 
+        }   
          
         return $next($request); 
     }

@@ -26,8 +26,8 @@
               <th>Id Kelas</th>
               <th>Alamat</th>
               <th>No Telp</th>
-              <th>SPP Tahun</th>
-              <th>Nominal SPP</th>
+              <th>ID SPP</th>
+              {{-- <th>Nominal SPP</th> --}}
               <th>Aksi</th>
             </tr>
           </thead>
@@ -41,8 +41,8 @@
                 <td>{{$item->kelas->nama_kelas}}</td>
                 <td>{{$item->alamat}}</td>
                 <td>{{$item->no_telp}}</td>
-                <td>{{$item->spp->tahun}}</td>
                 <td>Rp {{number_format($item->spp->nominal, 0,",",".")}}</td>
+                {{-- <td>Rp {{number_format($item->spp->nominal, 0,",",".")}}</td> --}}
 
                 <td class="d-flex gap-3 justify-content-center">
                   <a href="{{ route('siswa.show', $item->id_siswa )}}" class="btn btn-primary ml-1">

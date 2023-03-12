@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="row d-flex" style="justify-content: center;">
-
     <div class="col-md-6 grid-margin stretch-card">
       <div class="card">
         <div class="card-body p-5">
@@ -20,7 +19,6 @@
                         @endforeach
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="exampleFormControlSelect2">NISN :</label>
                         <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="nisn">
@@ -29,22 +27,18 @@
                         @endforeach
                         </select>
                     </div>
-
                     <div class="form-group">
                       <label for="exampleInputUsername1">Tanggal Bayar :</label>
                       <input type="date" class="form-control" id="exampleInputUsername1" placeholder="Tanggal Bayar" name="tgl_bayar">
                     </div>
-
                     <div class="form-group">
                       <label for="exampleInputUsername1">Bulan Di Bayar :</label>
                       <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Bulan Di Bayar" name="bulan_dibayar">
                     </div>
-
                     <div class="form-group">
                         <label for="exampleInputUsername1">Tahun Di Bayar :</label>
                         <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Tahun Di Bayar" name="tahun_dibayar">
                       </div>
-
                     <div class="form-group">
                       <label for="exampleFormControlSelect2">ID SPP :</label>
                       <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="id_spp">
@@ -53,24 +47,10 @@
                         @endforeach
                       </select>
                     </div>
-
                     <div class="form-group">
                       <label for="exampleTextarea1">Jumlah Bayar :</label>
                       <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Jumlah Bayar" name="jumlah_bayar"></textarea>
                     </div>
-                    {{-- <div class="form-group">
-                      <label for="exampleInputUsername1">Nomor Telepon :</label>
-                      <input type="number" class="form-control" id="exampleInputUsername1" placeholder="Telepon" name="no_telp">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleFormControlSelect2">Tahun :</label>
-                      <select class="form-control form-control-lg" id="exampleFormControlSelect2" name="id_spp">
-                        @foreach ($spp as $item)
-                        <option value="{{ $item->id_spp}}">{{ $item->tahun }} Rp{{ $item->nominal}}</option>
-                        @endforeach
-                      </select>
-                    </div> --}}
-
                     <div class="modal-footer">
                         <a href="{{ route('pembayaran.index') }}" class="btn btn-outline-warning btn-icon-text">                                                  
                         Cancel

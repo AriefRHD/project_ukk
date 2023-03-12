@@ -8,6 +8,7 @@ use App\Models\Petugas;
 use App\Models\Pembayaran;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
 
 class PembayaranController extends Controller
@@ -17,6 +18,10 @@ class PembayaranController extends Controller
      */
     public function index()
     {
+        if (Auth::user()->level != 'admin' && Auth::user()->level != 'petugas') {
+            return redirect()->back();
+        }
+        
         $pembayaran = Pembayaran::all();
         return view('Pembayaran.index', compact('pembayaran'));
     }

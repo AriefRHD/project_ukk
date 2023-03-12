@@ -22,4 +22,9 @@ class Siswa extends Authenticatable
         return $this->belongsTo('App\Models\kelas', 'id_kelas');
     }
 
+    public function spp()
+    {
+        return $this->belongsTo('App\Models\Spp', 'id_spp');
+    }
+
 }
