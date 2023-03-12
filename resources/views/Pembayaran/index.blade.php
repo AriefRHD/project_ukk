@@ -6,7 +6,7 @@
   <div class="card">
     <div class="card-body">
       <div class="card-title">
-        <center><h3>Data Pembayaran</h3></center><br>
+        <center><h3>DATA PEMBAYARAN</h3></center><br>
           <a href="{{ route('pembayaran.create') }}" class="btn btn-success" >
               <i class="mdi mdi-upload btn-icon-prepend"></i>                                                    
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
@@ -14,6 +14,11 @@
                 <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
               </svg> Tambah
           </a>
+          @if(auth()->user()->level == 'admin')
+          <a href="/exportpdf" class="btn btn-primary ml-1 " >
+              Export PDF
+          </a>
+          @endif
       </div>
       <div class="table-responsive text-center">
         <table class="table table-hover">

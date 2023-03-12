@@ -63,4 +63,7 @@ Route::group(['middleware' => ['auth','auth_login:admin']], function(){
     Route::resource('/kelas', KelasController::class);
     // DATA SISWA
     Route::resource('/siswa', SiswaController::class);
+    // EXPORT PDF DATA PEMBAYARAN
+   Route::get('/exportpdf',[PembayaranController::class, 'exportpdf'])->name('exportpdf');
+
 });

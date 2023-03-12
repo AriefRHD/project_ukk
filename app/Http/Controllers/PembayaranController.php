@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\RedirectResponse;
+use PDF;
 
 class PembayaranController extends Controller
 {
@@ -94,5 +95,14 @@ class PembayaranController extends Controller
         $pembayaran = Pembayaran::find($id_pembayaran);
         $pembayaran->delete();
         return redirect()->route('pembayaran.index')->with('success', 'Data deleted successfully');
+    }
+
+    public function exportpdf()
+    {
+        $pembayaran = Pembayaran::all();
+
+        view()->share('pembayaran', $pembayaran);
+        $pdf = PDF::loadview('pdf.export');
+        return $pdf->download('data-pembayaran.pdf');
     }
 }

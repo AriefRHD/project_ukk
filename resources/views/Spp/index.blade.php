@@ -6,7 +6,7 @@
   <div class="card">
     <div class="card-body">
       <div class="card-title">
-        <center><h3>Data Spp</h3></center><br>
+        <center><h3>DATA SPP</h3></center><br>
           <a href="{{ route('spp.create') }}" class="btn btn-success" >
               <i class="mdi mdi-upload btn-icon-prepend"></i>                                                    
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">

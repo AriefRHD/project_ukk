@@ -26,15 +26,12 @@
 
         <!-- Outer Row -->
         <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-12 col-md-9">
+            <div class="col-xl-5 col-lg-12 col-md-9">
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
                         <div class="row">
-                            <div class="col-lg-6 d-none d-lg-block">
-                                <img src="{{ asset('icon-pembayaran.png')}}" alt="" width="420px">
-                            </div>
-                            <div class="col-lg-6">
+                            <div class="col-lg-12">
                                 @if (session()->has('loginError'))
                                     <div class="alert alert-danger alert-dismissible fade show mt-2" role="alert">
                                         {{ session('loginError') }}
@@ -44,8 +41,16 @@
                                     </div>
                                 @endif
                                 <div class="p-5">
+                                    <div class=" d-flex justify-content-center">
+                                        <div class="sidebar-brand-icon rotate-n-15">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                                                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                              </svg>
+                                        </div>
+                                        <div class="text-gray-800 mx-3"><h1>SPPAY</h1></div>
+                                    </div>
                                     <div class="text-center">
-                                        <h1 class="h4 text-gray-900 mb-4">Login Admin / Petugas</h1>
+                                        <p class="text-gray-700 mt-3 mb-2">Login Sebagai Admin / Petugas</p>
                                     </div>
                                     <form class="user" method="post" action="{{ url('authenticate') }}">
                                         @csrf
