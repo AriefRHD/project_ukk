@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<center><h1>DATA PEMBAYARAN</h1></center>
+<center><h3>DATA PEMBAYARAN</h3></center>
 
 <table id="customers">
   <tr>

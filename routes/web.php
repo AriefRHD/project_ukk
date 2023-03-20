@@ -29,7 +29,7 @@ use App\Http\Controllers\LoginMasyarakatController;
 */
 
 Route::get('/', function () {
-    return view('templatenya.main');
+    return view('auth.login');
 });
 
 Route::group(['middleware' => ['guest']], function(){ 
