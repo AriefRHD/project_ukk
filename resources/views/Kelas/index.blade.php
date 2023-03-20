@@ -19,7 +19,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>Nama Kelas</th>
               <th>Kompetisi Keahlian</th>
               <th>Aksi</th>

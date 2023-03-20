@@ -32,7 +32,7 @@
 </head>
 <body>
 
-<center><h3>DATA PEMBAYARAN</h3></center>
+<center><h3>DATA PEMBAYARAN</h3><hr><br></center>
 
 <table id="customers">
   <tr>
@@ -45,6 +45,7 @@
     <th>SPP Tahun</th>
     <th>Nominal SPP</th>
     <th>Jumlah Bayar</th>
+    <th>Keterangan</th>
   </tr>
   @php
     $no=1; 
@@ -60,6 +61,7 @@
     <td>{{$item->spp->tahun}}</td>
     <td>{{number_format($item->spp->nominal, 0,",",".")}}</td>
     <td>{{number_format($item->jumlah_bayar, 0,",",".")}}</td>
+    <td>{{$item->keterangan}}</td>
   </tr>
   @endforeach
 

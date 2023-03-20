@@ -83,6 +83,7 @@ class PembayaranController extends Controller
             'tahun_dibayar' => $request->tahun_dibayar,
             'id_spp' => $request->id_spp,
             'jumlah_bayar' => $request->jumlah_bayar,
+            'keterangan' => $request->keterangan,
         ]);
         return redirect()->route('pembayaran.index')->with('success','Data Pembayaran Berhasil Di Edit');
     }

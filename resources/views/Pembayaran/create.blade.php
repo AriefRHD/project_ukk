@@ -49,7 +49,15 @@
                     </div>
                     <div class="form-group">
                       <label for="exampleTextarea1">Jumlah Bayar :</label>
-                      <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Jumlah Bayar" name="jumlah_bayar"></textarea>
+                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Jumlah Bayar" name="jumlah_bayar">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Keterangan :</label>
+                      <select name="keterangan" class="form-control">
+                            <option value="">Lunas / Belum Lunas</option>
+                            <option value="Lunas">Lunas</option>
+                            <option value="Belum">Belum lunas</option>
+                      </select>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ route('pembayaran.index') }}" class="btn btn-outline-warning btn-icon-text">                                                  

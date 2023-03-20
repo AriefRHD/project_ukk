@@ -19,7 +19,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>Username</th>
               <th>Password</th>
               <th>Nama</th>

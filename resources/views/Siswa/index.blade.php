@@ -19,7 +19,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>NISN</th>
               <th>NIS</th>
               <th>Nama</th>

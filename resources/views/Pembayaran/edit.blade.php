@@ -50,6 +50,14 @@
                 <label for="exampleInputUsername1">Jumlah Dibayar :</label>
                 <input type="number" class="form-control" id="exampleInputUsername1" name="jumlah_bayar" value="{{$pembayaran->jumlah_bayar }}">
             </div>
+            <div class="form-group">
+              <label for="exampleInputUsername1">Level :</label>
+              <select name="keterangan" class="form-control">
+                    <option value="{{ $pembayaran->keterangan}}">{{ $pembayaran->keterangan}}</option>
+                    <option value="Lunas">Lunas</option>
+                    <option value="Belum">Belum Lunas</option>
+              </select>
+            </div>
               <a href="{{ route('siswa.index') }}" class="btn btn-outline-warning btn-icon-text">                                                  
                 Cancel
               </a>

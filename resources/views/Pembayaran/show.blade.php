@@ -52,14 +52,21 @@
                                 <div class="row">
                                     <div class="col-md-3 text-start"><h7><b>ID SPP</b></h7></div>
                                     <div class="col-md-2">:</div>
-                                    <div class="col-md-7 text-start"><h7>{{ $pembayaran->id_spp }}</h7></div>
+                                    <div class="col-md-7 text-start"><h7>Rp {{number_format($pembayaran->spp->nominal, 0,",",".")}}</h7></div>
                                 </div>
                             </div>
                             <div class="col-md-12 text-start data mb-2">
                                 <div class="row">
                                     <div class="col-md-3 text-start"><h7><b>Jumlah Bayar</b></h7></div>
                                     <div class="col-md-2">:</div>
-                                    <div class="col-md-7 text-start"><h7>RP {{ $pembayaran->jumlah_bayar }}</h7></div>
+                                    <div class="col-md-7 text-start"><h7>Rp {{number_format($pembayaran->jumlah_bayar, 0,",",".")}}</h7></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-start data mb-2">
+                                <div class="row">
+                                    <div class="col-md-3 text-start"><h7><b>Keterangan</b></h7></div>
+                                    <div class="col-md-2">:</div>
+                                    <div class="col-md-7 text-start"><h7>{{ $pembayaran->keterangan }}</h7></div>
                                 </div>
                             </div>
                         </div>

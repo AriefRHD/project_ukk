@@ -24,7 +24,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>ID Petugas</th>
               <th>NISN</th>
               <th>Tanggal Bayar</th>
@@ -32,7 +32,8 @@
               <th>Tahun Dibayar</th>
               <th>SPP Tahun</th>
               <th>Nominal SPP</th>
-              <th>Jumlah Bayar</th>
+              {{-- <th>Jumlah Bayar</th> --}}
+              <th>Ket</th>
               <th>Aksi</th>
             </tr>
           </thead>
@@ -47,7 +48,8 @@
                 <td>{{$item->tahun_dibayar}}</td>
                 <td>{{$item->spp->tahun}}</td>
                 <td>Rp {{number_format($item->spp->nominal, 0,",",".")}}</td>
-                <td>Rp {{number_format($item->jumlah_bayar, 0,",",".")}}</td>
+                {{-- <td>Rp {{number_format($item->jumlah_bayar, 0,",",".")}}</td>   --}}
+                <td>{{$item->keterangan}}</td>
 
                 <td class="d-flex gap-3 justify-content-center">
                   <a href="{{ route('pembayaran.show', $item->id_pembayaran )}}" class="btn btn-primary ml-1">

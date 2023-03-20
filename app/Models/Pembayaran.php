@@ -13,7 +13,7 @@ class Pembayaran extends Model
     protected $primaryKey = "id_pembayaran";
     protected $table = "pembayaran";
     protected $fillable = [
-        'id_pembayaran','id_petugas','nisn', 'tgl_bayar', 'bulan_dibayar', 'tahun_dibayar','id_spp','jumlah_bayar'
+        'id_pembayaran','id_petugas','nisn', 'tgl_bayar', 'bulan_dibayar', 'tahun_dibayar','id_spp','jumlah_bayar','keterangan'
     ];
 
     public function petugas(){

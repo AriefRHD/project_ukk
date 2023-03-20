@@ -19,7 +19,7 @@
         <table class="table table-hover">
           <thead>
             <tr>
-              <th>ID</th>
+              <th>No</th>
               <th>Tahun</th>
               <th>Nominal</th>
               <th>Aksi</th>
